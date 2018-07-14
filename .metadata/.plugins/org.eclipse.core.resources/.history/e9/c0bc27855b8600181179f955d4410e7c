@@ -1,0 +1,19 @@
+package com.HRM.util;
+
+import java.io.IOException;
+
+import com.HRM.base.TestBase;
+
+public class TestUtil extends TestBase{
+
+	
+	
+	
+	
+	
+	public static void takeScreenshotAtEndOfTest() throws IOException{
+		
+	}
+	
+	
+}

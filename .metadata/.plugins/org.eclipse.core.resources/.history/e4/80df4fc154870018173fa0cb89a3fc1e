@@ -1,0 +1,21 @@
+package com.datadriven;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.excel.utility.Xls_Reader;
+
+public class HRM_Test {
+
+	public static void main(String[] args) {
+
+		Xls_Reader reader = new Xls_Reader(System.getProperty("user.dir")+"/src/com/testdata/datafiles/testdata.xlsx");
+		
+		int rowCount = reader.getRowCount("logins");
+		System.out.println(rowCount-1);
+		
+		
+		
+
+	}
+
+}

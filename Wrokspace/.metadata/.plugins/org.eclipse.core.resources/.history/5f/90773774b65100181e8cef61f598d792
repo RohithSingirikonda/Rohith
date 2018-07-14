@@ -1,0 +1,19 @@
+package com.hybridFramework.testBase;
+
+public class TestBase {
+
+	public void getBrowser(String browser)
+	{
+		if (System.getProperty("os.name").contains("window")) {
+			if (browser.equalsIgnoreCase("chrome")) {
+				System.setProperty("webdriver.chrome.driver", "");
+				
+			}
+			
+		} else {
+
+		}
+		
+	}
+	
+}

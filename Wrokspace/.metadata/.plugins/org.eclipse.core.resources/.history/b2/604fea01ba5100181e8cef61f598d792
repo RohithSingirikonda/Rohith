@@ -1,0 +1,37 @@
+package com.hybridFramework.testBase;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestBase {
+
+	WebDriver driver; 
+	
+	public void getBrowser(String browser)
+	{
+		if (System.getProperty("os.name").contains("window")) {
+			System.out.println(System.getProperty("os.name"));
+			if (browser.equalsIgnoreCase("chrome")) {
+				System.setProperty("webdriver.chrome.driver", System.setProperty(("user.dir"), "/drivers/chromedriver.exe"));
+				System.out.println(System.getProperty("user.dir"));
+				driver = new ChromeDriver();
+			}
+			else if (browser.equalsIgnoreCase("firefox") ) {
+				System.setProperty("webdriver.gecko.driver", System.setProperty(("user.dir"),"/drivers/geckodriver.exe"));
+			}
+		}
+		else if (System.getProperty("os.name").contains("mac")) {
+			if (browser.equalsIgnoreCase("chrome")) {
+				System.setProperty("webdriver.chrome.driver", System.setProperty(("user.dir"), "/drivers/chromedriver"));
+				driver = new ChromeDriver();
+			} else if(browser.equalsIgnoreCase("firefox")) {
+				System.setProperty("webdriver.gecko.driver", System.setProperty(("user.dir"), "/drivers/geckodriver"));
+				driver = new FirefoxDriver();
+
+			}
+			
+		}
+	}
+	
+}

@@ -1,0 +1,47 @@
+package com.datadriven;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.excel.utility.Xls_Reader;
+import com.qa.util.TestUtil;
+
+public class HRM_Test {
+
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Softwares\\Extracted Files\\chromedriver_win32 new\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.get("https://rohith-trials641.orangehrmlive.com/");
+		
+		Xls_Reader reader = new Xls_Reader(System.getProperty("user.dir")+"/src/com/testdata/datafiles/testdata.xlsx");
+		
+		int rowCount = reader.getRowCount("logins");
+		System.out.println(rowCount);
+		
+		
+
+		@DataProvider(name = "LoginTestDetails")
+		public Object[][] getNewToursTestData(){
+			Object data[][] = TestUtil.getTestData("logins");
+			return data;
+		}
+		
+		
+		@Test(priority=3, dataProvider="LoginTestDetails")
+		public void validateLogincredentials(String username, String password){
+			loginPage.Login(username, password);
+			String actualTitle = driver.getTitle();
+			expectedTitle = "Find a Flight: Mercury Tours:";
+			Assert.assertEquals(actualTitle,expectedTitle, "Test Fail");
+			
+		}
+		
+		
+		
+
+	}
+
+

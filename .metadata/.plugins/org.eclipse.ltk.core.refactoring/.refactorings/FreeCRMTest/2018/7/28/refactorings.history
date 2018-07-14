@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;OrangeHRM_Project/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;FreeCRMTest&apos;&#x0D;&#x0A;- Destination element: &apos;OrangeHRM_Project/src/main/resources&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     testng_sanity.xml&#x0D;&#x0A;     testng.xml" description="Copy files" destination="=OrangeHRM_Project/src\/main\/resources" element1="src/main/resources/testng_sanity.xml" element2="src/main/resources/testng.xml" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1531465948308" units="0" version="1.0"/>
+</session>

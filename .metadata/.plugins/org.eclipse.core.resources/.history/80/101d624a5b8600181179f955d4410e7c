@@ -1,0 +1,17 @@
+package com.HRM.util;
+
+import com.HRM.base.TestBase;
+
+public class TestUtil extends TestBase{
+
+	
+	
+	
+	
+	
+	public static void takeScreenshotAtEndOfTest(){
+		
+	}
+	
+	
+}

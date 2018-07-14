@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CrossBrowserTesting.java&apos; to &apos;MyFirstAutomationProject/src/first&apos;&#x0D;&#x0A;- Original project: &apos;GCReddy&apos;&#x0D;&#x0A;- Destination element: &apos;MyFirstAutomationProject/src/first&apos;&#x0D;&#x0A;- Original element: &apos;com.crossbrowser.testing.CrossBrowserTesting.java&apos;" description="Copy compilation unit" destination="=MyFirstAutomationProject/src&lt;first" element1="/src&lt;com.crossbrowser.testing{CrossBrowserTesting.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1525629168781" units="1" version="1.0"/>
+</session>

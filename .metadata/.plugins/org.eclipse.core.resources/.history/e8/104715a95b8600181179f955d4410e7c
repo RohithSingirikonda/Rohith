@@ -1,0 +1,9 @@
+package com.HRM.base;
+
+public class TestBase {
+	
+	public static WebDriver driver;
+	
+	
+
+}

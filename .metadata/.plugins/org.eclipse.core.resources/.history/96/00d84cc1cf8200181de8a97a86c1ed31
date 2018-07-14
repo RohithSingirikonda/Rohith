@@ -1,0 +1,27 @@
+package com.testing;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Locators_B {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://accounts.google.com/signin");
+		driver.manage().window().maximize();
+		
+		Thread.sleep(5000);
+		
+		driver.findElement(By.xpath("//span[contains(text(),'Create account')]")).click();
+		driver.findElement(By.id("firstName")).sendKeys("test");
+		driver.findElement(By.id("lastName")).sendKeys("test@123");
+		driver.findElement(By.id("username")).sendKeys("testmailid");
+		
+		
+	}
+
+}

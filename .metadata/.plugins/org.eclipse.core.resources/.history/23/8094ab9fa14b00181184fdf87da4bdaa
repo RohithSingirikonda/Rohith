@@ -1,0 +1,29 @@
+package locators;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Gmail {
+    public static void main(String[] args) {
+            
+    	System.setProperty("webdriver.chrome.driver","C:/Softwares/Extracted Files/chromedriver_win32 new/chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+		
+            String url = "https://accounts.google.com/signin";
+            driver.get(url);
+            driver.findElement(By.id("identifierId")).sendKeys("rohith555raju@gmail.com"); 
+            //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);      
+            WebDriverWait wait=new WebDriverWait(driver, 20);               
+            driver.findElement(By.xpath("//span[@class='RveJvd snByac']")).click();         
+            driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);        
+            driver.findElement(By.xpath("//input[@class='whsOnd zHQkBf']")).sendKeys("ilmyammananna!123#");             
+            driver.findElement(By.xpath("//span[@class='RveJvd snByac']")).click(); 
+    }  
+}

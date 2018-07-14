@@ -1,0 +1,6 @@
+package com.HRM.pages;
+
+public class UserHomePage extends TestBase{
+
+	
+}

@@ -1,0 +1,24 @@
+package com.hybridFramework.testBase;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestBase {
+
+	WebDriver driver; 
+	
+	public void getBrowser(String browser)
+	{
+		if (System.getProperty("os.name").contains("window")) {
+			if (browser.equalsIgnoreCase("chrome")) {
+				System.setProperty("webdriver.chrome.driver", System.setProperty(("user.dir"), "/drivers/chromedriver.exe"));
+				driver = new ChromeDriver();
+			}
+			else if (browser.equalsIgnoreCase("firefox") ) {
+				System.setProperty("webdriver.gecko.driver", System.setProperty(("user.dir"),"/drivers/geckodriver.exe"));
+			}
+			
+		} 		
+	}
+	
+}

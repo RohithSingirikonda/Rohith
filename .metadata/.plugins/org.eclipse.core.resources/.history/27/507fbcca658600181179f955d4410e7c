@@ -1,0 +1,53 @@
+package com.HRM.testcases;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+
+import com.HRM.base.TestBase;
+import com.HRM.pages.LoginPage;
+
+public class LoginPageTest extends TestBase{
+	
+	LoginPage loginpage;
+	
+	public LoginPageTest(){
+		super();
+	}
+	
+	
+	@BeforeMethod
+	public void SetUp() {
+		init();
+		loginpage = new LoginPage();
+		
+	}
+	
+	
+	@Test(priority=1)
+	public void ValidateLoginPageTitleTest(){
+		String title = loginpage.ValidateLoginPageTitle();
+		Assert.assertEquals(title, "OrangeHRM");
+	}
+  
+	@Test(priority=2)
+	public void ValidateLoginPageLogoTest(){
+		boolean flag = loginpage.ValidateHRMLogo();
+		assertTrue(flag);
+	}
+	
+	@Test(priority=3)
+	public void ValidateLoginCredintialsTest(String username, String password){
+		
+	}
+  
+	@AfterMethod
+	public void TearDown() {
+		driver.close();
+	}
+
+}

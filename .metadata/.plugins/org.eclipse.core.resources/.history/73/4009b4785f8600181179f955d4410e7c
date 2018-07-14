@@ -1,0 +1,21 @@
+package com.HRM.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.HRM.base.TestBase;
+
+public class LoginPage extends TestBase{
+
+	
+	@FindBy(xpath="//div[@id='divLogo']")
+	WebElement logo;
+	
+	@FindBy(name="")
+	WebElement UserName;
+	
+	@FindBy(name="")
+	WebElement Password;
+	
+	
+}

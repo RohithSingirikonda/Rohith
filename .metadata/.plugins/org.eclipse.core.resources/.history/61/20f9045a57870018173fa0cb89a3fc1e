@@ -1,0 +1,41 @@
+package com.datadriven;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.excel.utility.Xls_Reader;
+
+public class HRM_Test {
+
+	public static void main(String[] args) {
+		
+		String Sheet_Name ="logins";
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Softwares\\Extracted Files\\chromedriver_win32 new\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.get("https://rohith-trials641.orangehrmlive.com/");
+		
+		Xls_Reader reader = new Xls_Reader(System.getProperty("user.dir")+"/src/com/testdata/datafiles/testdata.xlsx");
+		
+		int rowCount = reader.getRowCount("logins");
+		System.out.println(rowCount);
+		
+		
+		for (int rowNum = 2; rowNum <=rowCount; rowNum++) {
+		
+			String email = reader.getCellData(Sheet_Name, "username", rowNum);	
+			String pass = reader.getCellData(Sheet_Name, "password", rowNum);
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+
+	}
+
+}
+

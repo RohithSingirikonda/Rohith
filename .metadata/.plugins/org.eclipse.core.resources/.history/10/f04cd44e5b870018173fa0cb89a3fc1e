@@ -1,0 +1,54 @@
+package com.datadriven;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.excel.utility.Xls_Reader;
+
+public class HRM_Test {
+
+	public static void main(String[] args) {
+		
+		String Sheet_Name ="logins";
+			
+		
+		Xls_Reader reader = new Xls_Reader(System.getProperty("user.dir")+"/src/com/testdata/datafiles/testdata.xlsx");
+		
+		int rowCount = reader.getRowCount("logins");
+		System.out.println(rowCount);
+		
+		
+		for (int rowNum = 2; rowNum <=rowCount; rowNum++) {
+	
+			System.setProperty("webdriver.chrome.driver","C:\\Softwares\\Extracted Files\\chromedriver_win32 new\\chromedriver.exe");
+			ChromeDriver driver = new ChromeDriver();
+		
+			driver.get("https://rohith-trials641.orangehrmlive.com/");
+		
+			String email = reader.getCellData(Sheet_Name, "username", rowNum);	
+			String pass = reader.getCellData(Sheet_Name, "password", rowNum);
+			
+			driver.findElement(By.id("txtUsername")).sendKeys(email);
+			driver.findElement(By.id("txtPassword")).sendKeys(pass);
+			driver.findElement(By.id("btnLogin")).click();
+			System.out.println("clicked");
+			
+			String alert = driver.findElement(By.xpath("//span[@id='spanMessage']")).getText();
+			
+			if (alert == "") {
+				System.out.println("Successfull Login");
+			} else {
+				reader.setCellData(Sheet_Name, "output", rowNum, alert);
+			}
+			
+			driver.close();
+	
+			
+		}
+		
+		
+
+	}
+
+}
+

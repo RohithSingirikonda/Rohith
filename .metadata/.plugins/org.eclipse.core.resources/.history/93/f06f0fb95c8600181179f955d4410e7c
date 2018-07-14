@@ -1,0 +1,17 @@
+package com.HRM.base;
+
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+
+public class TestBase {
+	
+	public static WebDriver driver;
+	public static Properties prop;
+	public static EventFiringWebDriver e_driver;
+	
+	
+	
+
+}

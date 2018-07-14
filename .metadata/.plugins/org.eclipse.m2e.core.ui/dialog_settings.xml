@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\ramya\Desktop\Rohith\NewtoursProject\pom.xml"/>
+			<item value="C:\Users\ramya\Desktop\Rohith\Selenium"/>
+			<item value="C:\Users\ramya\Desktop\Rohith\Testing"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.OrangeHRM_Project"/>
+			<item value="SeleniumTraining.SeleniumTraining"/>
+			<item value="com.Guru99"/>
+			<item value="com.GripTestProject"/>
+			<item value="com.FreeCRMPro"/>
+			<item value="com.freeCRMManagement"/>
+			<item value="com.FreeCRMManagement"/>
+			<item value="FreeCRMManagement.com"/>
+			<item value="com.FreeCRMTest.FreeCRMManagement"/>
+			<item value="com.hybridFramework"/>
+			<item value="com.HybridFramework"/>
+			<item value="com.Selenium"/>
+			<item value="LoginValidation.Banking"/>
+			<item value="loginvalidation.banking.com"/>
+		</list>
+		<list key="groupId">
+			<item value="com"/>
+			<item value="SeleniumTraining"/>
+			<item value="FreeCRMManagement"/>
+			<item value="com.FreeCRMTest"/>
+			<item value="LoginValidation"/>
+			<item value="loginvalidation"/>
+		</list>
+		<list key="artifactId">
+			<item value="OrangeHRM_Project"/>
+			<item value="SeleniumTraining"/>
+			<item value="Guru99"/>
+			<item value="GripTestProject"/>
+			<item value="FreeCRMPro"/>
+			<item value="freeCRMManagement"/>
+			<item value="FreeCRMManagement"/>
+			<item value="com"/>
+			<item value="hybridFramework"/>
+			<item value="HybridFramework"/>
+			<item value="Selenium"/>
+			<item value="Banking"/>
+			<item value="banking.com"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

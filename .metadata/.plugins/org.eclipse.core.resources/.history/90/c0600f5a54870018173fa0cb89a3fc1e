@@ -1,0 +1,19 @@
+package com.datadriven;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HRM_Test {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Softwares\\Extracted Files\\chromedriver_win32 new\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.get("https://rohith-trials641.orangehrmlive.com/");
+		
+		
+		
+
+	}
+
+}

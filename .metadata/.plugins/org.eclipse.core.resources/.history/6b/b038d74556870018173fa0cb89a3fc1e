@@ -1,0 +1,44 @@
+package com.datadriven;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+
+import com.excel.utility.Xls_Reader;
+
+public class HRMTestData {
+	
+	public static Xls_Reader reader;
+ 
+  @BeforeMethod
+  public void beforeMethod() {
+	  System.setProperty("webdriver.chrome.driver","C:\\Softwares\\Extracted Files\\chromedriver_win32 new\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://rohith-trials641.orangehrmlive.com/");
+		
+		reader = new Xls_Reader(System.getProperty("user.dir")+"/src/com/testdata/datafiles/testdata.xlsx");
+  }
+
+  @DataProvider(name = "LoginTestDetails")
+	public Object[][] getNewToursTestData(){
+		Object data[][] = reader.getTestData("logins");
+		return data;
+	}
+	
+  
+  	@Test
+  	public void LoginCheck(){
+	  
+  	}
+  
+  
+  
+  
+  
+  @AfterMethod
+  public void afterMethod() {
+  }
+
+}

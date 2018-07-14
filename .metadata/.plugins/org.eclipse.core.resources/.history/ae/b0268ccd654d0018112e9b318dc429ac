@@ -1,0 +1,10 @@
+package java_scripts;
+
+public class ToEnter_TEXT_into_DisabledButton {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
